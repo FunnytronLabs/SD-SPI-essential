@@ -1,4 +1,8 @@
 /*
+ * Adapted from: https://github.com/espressif/arduino-esp32/tree/master/libraries/SD
+ */
+
+/*
  * pin 1 - not used          |  Micro SD card     |
  * pin 2 - CS (SS)           |                   /
  * pin 3 - DI (MOSI)         |                  |__
