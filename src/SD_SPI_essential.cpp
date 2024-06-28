@@ -163,11 +163,11 @@ void testFileIO(fs::FS &fs, const char * path){
     file.close();
 }
 
-void SD_SPI_initialise(int SD_SPI_SCK, int SD_SPI_MISO, int SD_SPI_MOSI, int SD_SPI_CS){
-    SPI.begin(SD_SPI_SCK, SD_SPI_MISO, SD_SPI_MOSI, SD_SPI_CS);
+void SD_SPI_initialise(int sck, int miso, int mosi, int cs){
+    SPI.begin(sck, miso, mosi, cs);
 
-    pinMode(SD_SPI_CS, OUTPUT);
-    if(!SD.begin(SD_SPI_CS)){
+    pinMode(cs, OUTPUT);
+    if(!SD.begin(cs)){
         Serial.println("Card Mount Failed");
         return;
     }
