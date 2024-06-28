@@ -163,13 +163,11 @@ void testFileIO(fs::FS &fs, const char * path){
     file.close();
 }
 
-void SD_SPI_initialise(){
-#ifdef REASSIGN_PINS
+void SD_SPI_initialise(int SD_SPI_SCK, int SD_SPI_MISO, int SD_SPI_MOSI, int SD_SPI_CS){
     SPI.begin(SD_SPI_SCK, SD_SPI_MISO, SD_SPI_MOSI, SD_SPI_CS);
-#endif
+
     pinMode(SD_SPI_CS, OUTPUT);
-    if(!SD.begin(SD_SPI_CS)){ //Change to this function to manually change CS pin
-    //if(!SD.begin()){
+    if(!SD.begin(SD_SPI_CS)){
         Serial.println("Card Mount Failed");
         return;
     }
