@@ -1,3 +1,7 @@
+/*
+ * Adapted from: https://github.com/espressif/arduino-esp32/tree/master/libraries/SD
+ */
+
 #include "SD_SPI_essential.h"
 #include "Arduino.h"
 
