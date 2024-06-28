@@ -2,10 +2,12 @@
  * Adapted from: https://github.com/espressif/arduino-esp32/tree/master/libraries/SD
  */
 
+// === INCLUDES === //
 #include "SD_SPI_essential.h"
 #include "Arduino.h"
 
 
+//=== FUNCTIONS === //
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
     Serial.printf("Listing directory: %s\n", dirname);
 
