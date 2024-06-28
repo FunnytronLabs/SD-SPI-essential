@@ -42,18 +42,13 @@
  * https://github.com/espressif/arduino-esp32/tree/master/libraries/SD
  */
 
+// === INCLUDES === //
 #include "FS.h"
 #include "SD.h"
 #include "SPI.h"
 
-//Uncomment and set up if you want to use custom pins for the SPI communication
-#define REASSIGN_PINS
-#define SD_SPI_SCK  19 // FOR CUSTOM PIN ASSIGNMENT
-#define SD_SPI_MISO 21 // FOR CUSTOM PIN ASSIGNMENT
-#define SD_SPI_MOSI 18 // FOR CUSTOM PIN ASSIGNMENT
-#define SD_SPI_CS   5  // FOR CUSTOM PIN ASSIGNMENT
 
-
+// === PROTOTYPES === //
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels);
 void createDir(fs::FS &fs, const char * path);
 void removeDir(fs::FS &fs, const char * path);
@@ -64,4 +59,4 @@ void renameFile(fs::FS &fs, const char * path1, const char * path2);
 void deleteFile(fs::FS &fs, const char * path);
 void testFileIO(fs::FS &fs, const char * path);
 
-void SD_SPI_initialise();
+void SD_SPI_initialise(int sck, int miso, int mosi, int cs);
