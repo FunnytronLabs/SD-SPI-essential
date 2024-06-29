@@ -1,0 +1,9 @@
+listDir	KEYWORD2
+createDir	KEYWORD2
+removeDir	KEYWORD2
+readFile	KEYWORD2
+writeFile	KEYWORD2
+appendFile	KEYWORD2
+renameFile	KEYWORD2
+deleteFile	KEYWORD2
+SD_SPI_initialise	KEYWORD2
